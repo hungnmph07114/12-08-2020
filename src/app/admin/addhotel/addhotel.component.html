@@ -1,0 +1,72 @@
+
+
+<div class="row">
+  <div class="col-12 grid-margin">
+    <div class="card">
+      <!-- partial -->
+      <form class="form-horizontal">
+        <fieldset>
+          <!-- Form Name -->
+          <legend>ADD HOTEL</legend>
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="product_name">HOTEL NAME</label>
+            <input  name="name" placeholder="HOTEL NAME" [(ngModel)] ="hotel.name" class="form-control input-md" required="" type="text">
+          </div>
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">ADDRESS</label>
+            <input  name="address"  placeholder="HOTEL ADDRESS"  [(ngModel)] ="hotel.address" class="form-control input-md" required="" type="text">
+          </div>
+          <div class="form-group">
+            <label class="col-md-4 control-label">District</label>
+            <input  name="district"  placeholder="HOTEL district"  [(ngModel)] ="hotel.district" class="form-control input-md" required="" type="text">
+          </div>
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label">PROVENSIE</label>
+            <input name="provensie"  placeholder="HOTEL PROVENSIE "  [(ngModel)] ="hotel.province" class="form-control input-md" required="" type="text">
+          </div>
+          <!-- File Button -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="filebutton">main_image</label>
+            <div class="col-md-4">
+              <div class="col-lg-6">
+                <div class="product_image_slider_container">
+                    <div id="slider" class="flexslider">
+                        <ul class="slides">
+                            <div class="form-group">
+                                <label class="btn btn-danger" for="file">Cập nhật ảnh</label>
+                                <input type="file" id="file" (change)="onChange($event.target.files[0])"><br>
+                                <input class="form-control" [(ngModel)]="imageHotel.imagePath" placeholder="Link Image"
+                                    name="img">
+                            </div>
+                            {{mes}}
+                            <!-- <li>
+                                <img [src]="hotel.img" />
+                            </li> -->
+
+                        </ul>
+                    </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Button -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="singlebutton">Single Button</label>
+            <div class="col-md-4">
+              <button type="submit" (click)="Addhotel()"  class="btn btn-primary">Button</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+

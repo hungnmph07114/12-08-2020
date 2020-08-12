@@ -1,0 +1,85 @@
+  <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button> -->
+  <!-- partial -->
+  <div class="content-wrapper">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12">
+                <div class="table-responsive">
+                  <table id="order-listing" class="table" cellspacing="0" width="100%">
+                    <thead>
+                      <tr class="bg-primary text-white">
+                          <th>Name</th>
+                          <th>Address </th>
+                          <th>District</th>
+                          <th>Province</th>
+                          <th>Room</th>
+                          <th>Aciton</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let dp of hotelList" >
+                          <td>{{dp.name}}</td>
+                          <td>{{dp.address}}</td>
+                          <td>{{dp.district}}</td>
+                          <td>{{dp.province}}</td>
+                          <td>
+                            <button class="btn btn-danger" (click)="addroom(dp.id)">+</button>
+                            <button class="btn btn-light">
+                              <i class="mdi mdi-eye text-primary"></i>View
+                             </button>
+                          </td>
+                          <td>
+                            <button class="btn btn-light" (click)="EditHotel(dp.id)">
+                              Edit
+                             </button>
+                             <button class="btn btn-light">
+                              Delete
+                             </button>
+                          </td>
+
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- partial:../../partials/_footer.html -->
+    <footer class="footer">
+      <div class="container-fluid clearfix">
+        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2017 <a href="#">UrbanUI</a>. All rights reserved.</span>
+        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+      </div>
+    </footer>
+    <!-- partial -->
+  </div>
+  <!-- content-wrapper ends -->
+<!-- row-offcanvas ends -->
+
+<!-- page-body-wrapper ends -->
+
+<!-- container-scroller -->
+<!-- plugins:js -->
+<script src="..\..\vendors\js\vendor.bundle.base.js"></script>
+<!-- endinject -->
+<!-- Plugin js for this page-->
+<script src="..\..\vendors\datatables.net\jquery.dataTables.js"></script>
+<script src="..\..\vendors\datatables.net-bs4\dataTables.bootstrap4.js"></script>
+<!-- End plugin js for this page-->
+<!-- inject:js -->
+<script src="..\..\js\off-canvas.js"></script>
+<script src="..\..\js\hoverable-collapse.js"></script>
+<script src="..\..\js\misc.js"></script>
+<script src="..\..\js\settings.js"></script>
+<script src="..\..\js\todolist.js"></script>
+<!-- endinject -->
+<!-- Custom js for this page-->
